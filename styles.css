@@ -112,6 +112,24 @@ body {
   font-weight: bold;
 }
 
+/* footer styles */
+
+.container-footer {
+  display: flex;
+  height: 80px;
+  color: #fff;
+  background-color: #a040a0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-footer a {
+  color: black;
+  cursor: pointer;
+}
+
+/* responsive styles */
 @media screen and (max-width: 600px) {
   .container-pokemos {
     display: flex;

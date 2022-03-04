@@ -8,10 +8,9 @@ async function apiDada() {
 async function getPokemon() {
     let apiRepose = await apiDada()
 
-    // aqui vai ser incrementado a questão da páginação 
-    for (let i = 0; i < apiRepose.pokemon.length; i++) {
-        let name = await apiRepose.pokemon[i].name
-        let img = await apiRepose.pokemon[i].img
+    // aqui vai ser incrementado a questão da páginação onde tá o 24
+    for (let i = 0; i < 24; i++) {
+        let { name, img } = await apiRepose.pokemon[i]
         mountComponentDiv(name, img)
     }
 }
