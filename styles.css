@@ -12,6 +12,9 @@ body {
 }
 
 /* header styles */
+#container {
+  min-width: 300px;
+}
 
 .header-container {
   padding: 15px 0 10px 20px;
@@ -81,7 +84,40 @@ body {
 /* Grid pokemon */
 .container-pokemos {
   display: grid;
+  width: 100%;
   padding: 20px;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-rows: 1fr;
   gap: 30px;
+}
+
+.frame-pokemon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  background-color: #a040a0;
+}
+
+.frame-pokemon:hover {
+  opacity: 0.9;
+}
+
+.frame-pokemon p {
+  color: white;
+  letter-spacing: 1px;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 600px) {
+  .container-pokemos {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
