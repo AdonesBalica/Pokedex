@@ -77,3 +77,11 @@ body {
 .search-section input:focus::placeholder {
   color: #a040a0;
 }
+
+/* Grid pokemon */
+.container-pokemos {
+  display: grid;
+  padding: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+}
