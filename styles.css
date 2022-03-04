@@ -107,6 +107,9 @@ body {
 
 .frame-pokemon p {
   color: white;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
   letter-spacing: 1px;
   font-size: 1.2em;
   font-weight: bold;
