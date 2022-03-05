@@ -7,36 +7,29 @@ async function apiDada() {
 }
 
 const inputValue = document.querySelector(".input-search");
-const loadMorePosts = document.querySelector(".load-cards");
-
-let page = 0;
-let cardsPerPage = 10;
-let nextCard = 10;
-let nextPage = 10;
-
-function pagination() {
-    getPokemon()
-    nextPage = page + cardsPerPage + nextCard
-    page = page + cardsPerPage
-    return nextPage
-}
-
-loadMorePosts.addEventListener("click", () => {
-    pagination()
-})
 
 async function getPokemon() {
     let apiRepose = await apiDada();
-    // aqui vai ser incrementado a questão da páginação onde tá o 24
-
-    apiRepose.pokemon.slice(page, nextPage).forEach((e, i) => {
+    apiRepose.pokemon.forEach((e) => {
         let name = e.name
         let img = e.img
         mountComponentDiv(name, img);
     })
-
 }
+
 getPokemon()
+inputValue.addEventListener('input', async () => {
+    let filtrarPokemon = document.querySelectorAll('.frame-pokemon')
+
+    filtrarPokemon.forEach((element) => {
+        let name = element.children[1].textContent.toLowerCase()
+        if (name.includes(inputValue.value.toLowerCase())) {
+            element.style.display = 'flex'
+        } else {
+            element.style.display = 'none'
+        }
+    })
+})
 
 /*Montar as divs */
 function mountComponentDiv(name, url) {
