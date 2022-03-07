@@ -97,11 +97,14 @@ main {
 .frame-pokemon {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
+  cursor: pointer;
   width: 200px;
   height: 200px;
-  background-color: #a040a0;
+  background-image: url("./images/bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .frame-pokemon:hover {
@@ -138,10 +141,12 @@ main {
 /* responsive styles */
 @media screen and (max-width: 600px) {
   .container-pokemos {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .frame-pokemon {
+    width: 150px;
+    height: 150px;
   }
 }
