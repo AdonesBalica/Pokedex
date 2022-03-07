@@ -46,6 +46,7 @@ body {
 /* search section */
 main {
   min-height: 84.4vh;
+  z-index: 0;
 }
 
 .search-section {
@@ -85,29 +86,28 @@ main {
 }
 
 /* Grid pokemon */
-.container-pokemos {
+.ul-container {
   display: grid;
   width: 100%;
+  list-style: none;
   padding: 20px;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-template-rows: 1fr;
   gap: 30px;
 }
 
-.frame-pokemon {
+.ul-container li {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
   cursor: pointer;
-  width: 200px;
+  background-color: #a040a0;
+  width: 140px;
   height: 200px;
-  background-image: url("./images/bg.png");
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
-.frame-pokemon:hover {
+.ul-container li:hover {
   opacity: 0.9;
 }
 
